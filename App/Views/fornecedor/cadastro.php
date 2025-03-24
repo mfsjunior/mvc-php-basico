@@ -2,13 +2,13 @@
     <div class="row">
         <div class="col-md-3"></div>
         <div class="col-md-6">
-            <h3>Cadastro de cliente</h3>
+            <h3>Cadastro de fornecedor</h3>
 
             <?php if($Sessao::retornaMensagem()){ ?>
                 <div class="alert alert-warning" role="alert"><?php echo $Sessao::retornaMensagem(); ?></div>
             <?php } ?>
 
-            <form action="http://<?php echo APP_HOST; ?>/cliente/salvar" method="post" id="form_cadastro">
+            <form action="http://<?php echo APP_HOST; ?>/fornecedor/salvar" method="post" id="form_cadastro">
                 <div class="form-group">
                     <label for="nome">Nome</label>
                     <input type="text" class="form-control"  name="nome" placeholder="Seu nome" value="<?php echo $Sessao::retornaValorFormulario('nome'); ?>" required>
@@ -17,8 +17,10 @@
                     <label for="email">E-mail</label>
                     <input type="email" class="form-control" name="email" placeholder="" value="<?php echo $Sessao::retornaValorFormulario('email'); ?>" required>
                 </div>
-                
-
+                <div class="form-group">
+                    <label for="CNPJ">CNPJ</label>
+                    <input type="CNPJ" class="form-control" name="CNPJ" placeholder="" value="<?php echo $Sessao::retornaValorFormulario('CNPJ'); ?>" required>
+                </div>
 
                 <button type="submit" class="btn btn-success btn-sm">Salvar</button>
             </form>
