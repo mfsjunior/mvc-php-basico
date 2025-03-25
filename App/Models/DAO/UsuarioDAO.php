@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Models\DAO;
-
+use Exception;
 use App\Models\Entidades\Usuario;
 
 class UsuarioDAO extends BaseDAO
